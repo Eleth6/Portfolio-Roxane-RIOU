@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Quattrocento:wght@400;700&display=swap');
+
+*{
+    --headerDark: #e0dfdf;
+    --darkerSection: #e6e6e6;
+    --lightSection: #f1f1f1;
+    --darkSection: #EBECEC;
+    --lightFont: #CC726F;
+    --darkFont: #774936;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--darkFont);
+    font-family: 'Quattrocento', serif;
+}
+
+.english {
+    display: none;
+}
+
+/* ------------------------- Header ------------------------- */
+
+header {
+    background-color: var(--headerDark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 1px 5px;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px 15px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>a {
+    color: var(--lightFont);
+    text-decoration: none;
+    padding: 20px;
+    margin: 0 5px;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+nav>a.active {
+    color: var(--darkFont);
+}
+
+nav>a>span {
+    position: relative;
+}
+
+nav>a>span:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: var(--darkFont);
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.4s;
+}
+
+nav>a:hover {
+    color: var(--darkFont)
+}
+
+nav>a:hover>span:after, nav>a.active>span:after {
+    transform: scaleX(1);
+}
+
+/* ------------------------- Sections ------------------------- */
+
+section {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: var(--lightSection);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(even){
+    background-color: var(--darkSection);
+}
+
+h2 {
+    color: var(--lightFont);
+    margin: 0;
+}
+
+.sectNav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+    background-color: var(--darkerSection);
+    justify-content: space-evenly;
+    align-items: center; 
+    border-radius: 20px;
+    z-index:0;  
+    box-shadow: rgba(0, 0, 0, 0.2) 1.2px 1.2px 2.5px;
+}
+
+.navBtn.active {
+    color: var(--lightFont);
+}
+
+.navBtn {
+    background-color: transparent;
+    border: none;
+    padding: 25px 100px;
+    cursor: pointer;
+    font-family: 'Quattrocento', serif;
+    color: var(--darkFont);
+    font-size: 16px;
+}
+
+.navBtn span {
+    position: relative;
+    transition: 0.4s;
+}
+
+.navBtn>span:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: var(--lightFont);
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.4s;
+}
+
+.navBtn:hover>span {
+    color: var(--lightFont);
+}
+
+.navBtn:hover>span:after, .navBtn.active>span:after {
+    transform: scaleX(1);
+}
+
+.sectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darkerSection);
+    height: 55vh;
+    border-radius: 20px;
+}
+
+/* ------------------------- Home ------------------------- */
+
+#home {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url('../img/fond.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.profilePic {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+}
+
+.colorPop {
+    color: var(--lightFont);
+    font-size: 60px;
+    padding: 0;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.homeText p {
+    font-size: 22px;
+}
+
+/* ------------------------- CV ------------------------- */
+
+#cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cvSect {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 85vw;
+    justify-content: space-between;
+}
+
+.cvCard {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.line {
+    background-color: var(--darkFont);
+    width: 3vw;
+    height: 1px;
+    font-weight: 200;
+    margin: 8px 0px;
+}
+
+/* Formation */
+
+#formation>.cvCard {
+    justify-content: center;
+    width: 18vw;
+}
+
+#formation>.cvCard>p {
+    text-align: center;
+}
+
+/* Expérience */
+
+#experience>.cvCard {
+    width: 85vw;
+    justify-content: center;
+}
+
+#experience>.cvCard>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.expText {
+    width: 25vw;
+    /* background-color: #CC726F; */
+    margin: 0px 20px;
+}
+
+.expText>p {
+    text-align: center;
+}
+
+.expText>ul>li>a {
+    color: var(--lightFont);
+    transition: 0.2s;
+}
+
+.expText>ul>li>a:hover {
+    color: var(--darkFont);
+}
+
+#experience {
+    display: none;
+}
+
+/* Compétences */
+
+#competences>.cvCard {
+    width: 16vw;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.cvCard>.bold, .cvCard>.line {
+    align-self: center;
+    text-align: center;
+}
+
+.cvCard>.bold {
+    margin-top: 30px;
+}
+
+.cvCard>ul {
+    padding-left: 20px;
+}
+
+.cvCard>ul>li {
+    font-size: 15px;
+    margin-bottom: 5px; 
+}
+
+.dev>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dev>ul>li {
+    margin-left: 10px;
+}
+
+.dev>ul>li>i {
+    margin-right: 5px;
+}
+
+#competences {
+    display: none;
+}
+
+/* scolaire */
+
+#scolaire>.cvCard {
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#scolaire {
+    justify-content: center;
+}
+
+#scolaire {
+    display: none;
+}
+
+/* Lien */
+
+#cv>a {
+    color: var(--lightFont);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 42px 130px 15px 130px;
+}
+
+#cv>a>span {
+    position: relative;
+}
+
+#cv>a>span>i {
+    margin-right: 5px;
+}
+
+#cv>a>span:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--lightFont);
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.4s;
+}
+
+#cv>a:hover>span:after {
+    transform: scaleX(1);
+}
+
+/* ------------------------- A propos ------------------------- */
+
+#apropos {
+    flex-direction: column;
+}
+
+#apropos>h2 {
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+#apropos>.sectCard {
+    flex-direction: row;
+    width: 80vw;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+#apropos>.sectCard>p {
+    width: 40vw;
+    text-align: justify;
+    padding: 15px;
+    margin: 35px;
+    border: solid 2px var(--lightFont);
+    border-radius: 5px;
+}
+
+/* Voyage */
+
+#voyage {
+    display: flex;
+}
+
+.slider {
+    position: relative;
+    width: 35vw;
+    height: 55vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 1.5s;
+}
+
+.slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .info {
+    position: absolute;
+    color: var(--darkFont);
+    font-size: 16px;
+    background: rgba(224, 223, 223, 0.8);
+    padding: 0 10px;
+    margin: 35px 0 0 35px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.navigation {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.slider:hover .navigation {
+    opacity: 1;
+}
+
+.prev-btn, .next-btn {
+    z-index: 999;
+    font-size: 1.5em;
+    color: var(--darkFont);
+    background: rgba(224, 223, 223, 0.7);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    border-radius: 0 5px 5px 0;
+}
+
+.next-btn {
+    border-radius: 5px 0 0 5px;
+}
+
+.navigation-visibility {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-visibility .slide-icon {
+    z-index: 999;
+    background: rgba(224, 223, 223, 0.7);
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.navigation-visibility .slide-icon.active {
+    background: var(--darkFont);
+}
+
+/* Musique */
+
+#musique {
+    display: none;
+}
+
+.aboutCard>img {
+    height: 55vh;
+    width: auto;
+    border-radius: 20px;
+}
+
+/* Sport */
+
+#sport {
+    display: none;
+}
+
+/* culture */
+
+#culture {
+    display: none;
+}
+
+/* ------------------------- Projets ------------------------- */
+
+#projet {
+    flex-direction: column;
+}
+
+#projet h2 {
+    margin: 0 0 20px 0;
+}
+
+.projSect {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.projCard {
+    width: 28vw;
+    height: 77vh;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+}
+
+.projCard>img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.projCard>h3 {
+    margin: 20px 0 0 0;
+    align-self: center;
+    color: var(--lightFont);
+    font-size: 16px;
+}
+
+.projCard>.line {
+    align-self: center;
+    margin: 17px 0px;
+}
+
+.projCard>.outils>p {
+    margin: 5px 20px;
+    font-size: 14px;
+}
+
+.projCard>p {
+    margin: 0 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.projCard>p>a {
+    color: var(--lightFont);
+    font-weight: bold;
+}
+
+.projCard>a {
+    position: absolute;
+    font-size: 15px;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 0 0 20px 20px;
+    border-top: solid 1px rgba(0, 0, 0, 0.15);
+    background-color: var(--headerDark);
+    text-align: center;
+    text-decoration: none;
+    color: var(--lightFont);
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.projCard>a>span>i {
+    margin-left: 5px;
+}
+
+.projCard>a>span {
+    position: relative;
+}
+
+.projCard>a>span::after {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--darkFont);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+
+.projCard>a:hover {
+    color: var(--darkFont);
+}
+
+.projCard>a:hover>span::after {
+    transform: scaleX(1);
+}
+
+/* ------------------------- Contact ------------------------- */
+
+.cardContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--darkerSection);
+    border-radius: 30px;
+    padding: 2vw;
+    width: 60vw;
+    height: 45vh;
+    color: var(--darkFont);
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.cardContact h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.cardContact .profilePic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    right: 60px;
+}
+
+.cardContact p {
+    width: 40vw;
+    text-align: justify;
+    font-size: 17px;
+    margin: 2em 0 1em calc(2em - 10px);
+    padding-left: 10px;
+    border-left: 2px solid var(--lightFont);
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.social li {
+    margin-bottom: 15px;
+}
+
+.social li a i {
+    margin-right: 10px;
+}
+
+.social li a {
+    text-decoration: none;
+    color: var(--darkFont);
+    font-size: 18px;
+    padding: 15px 70px 15px 25px;
+    transition: 0.6s;
+}
+
+.social li a:hover {
+    margin-left: 10px;
+    color: var(--lightFont);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--darkSection);
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>img {
+    width: 40px;
+    height: 40px;
+}
+
+footer>p {
+    font-size: 12px;
+    color: var(--darkFont);
+    padding:0;
+    margin: 10px 0 0 0;
+}
+
+/* Animations */
+
+/* Animations */
+
+.fadeDown {
+    animation: fadeDown 2s;
+    -webkit-animation: fadeDown 2s forwards;
+  }
+
+.fadeUp {
+  animation: fadeUp 1s;
+  -webkit-animation: fadeUp 1s forwards;
+}
+  
+  .fadeLeft {
+    animation: fadeLeft 2s;
+    -webkit-animation: fadeLeft 2s forwards;
+  }
+  
+  .fadeRight {
+    animation: fadeRight 2s;
+    -webkit-animation: fadeRight 2s forwards;
+  }
+
+  .fadeIn {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeDown {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+
+  @-webkit-keyframes fadeDown {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  
+  @keyframes fadeRight {
+    from {
+        transform: translateX(1000px);
+    }    
+    
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+  
+  @-webkit-keyframes fadeRight {
+    from {
+        transform: translateX(1000px);
+    }     
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+  
+  @keyframes fadeLeft {
+    from {
+        transform: translateX(-100px);
+    }    
+    
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+  
+  @-webkit-keyframes fadeLeft {
+    from {
+        transform: translateX(-100px);
+    }    
+    
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
