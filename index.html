@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/png" href="img/lightLogo.png">
     <script src="https://kit.fontawesome.com/6152881e51.js" crossorigin="anonymous"></script>
     <title>Roxane RIOU - Portfolio</title>
@@ -301,7 +302,7 @@
                 </div>
             </div>
             <div id="musique" class="sectCard aboutCard fadeIn">
-                <img src="img/piano.jpg" alt="piano">
+                <img src="img/piano.JPG" alt="piano">
                 <p>Je pratique le piano depuis 14 ans. J'ai été dans des écoles de musique en Corée du Sud et en Slovaquie et à mon retour en France j'ai
                     intégré le Conservatoire de Nantes. J'ai eu l'occasion de jouer en concert, notamment à la résidence de l'Ambassade de France en Slovaquie.
                     <br><br> La pratique du piano m'a permis de gagner en discipline et m'a donné le goût de l'effort. 
@@ -327,15 +328,13 @@
         <section id="projet">
             <h2>Projets</h2>
             <div class="projSect">
-                <div class="sectCard projCard">
+                <div id="carte" class="sectCard projCard">
                     <img src="img/projets/cartotourisme.jpg" alt="">
                     <h3>CartoTourisme</h3>
-                    <span class="line"></span>
                     <div class="outils">
                         <p><b>Langages :</b> HTML, CSS, PHP</p>
                         <p><b>Frameworks :</b> Laravel, Bootstrap</p>
                     </div>
-                    <span class="line"></span>
                     <p>Le projet CartoTourisme consiste à cartographier le Bénin et créer un site internet afin de promouvoir le tourisme 
                         dans le pays. J’ai eu l’occasion de travailler sur ce projet pendant 2 mois lors de mon stage au BloLab. J’ai rédigé 
                         un <a href="PDF/Cahier des charges.pdf" target="_blank">cahier des charges</a> puis réalisé le site internet à partir d’un template et à l’aide des frameworks Laravel et 
@@ -343,33 +342,28 @@
                     </p>
                     <a href="https://eleth6.github.io/CartoTourisme-HTML/" target="_blank"><span>Visiter le site (non dynamique) <i class="fas fa-arrow-right"></i></span></a>              
                 </div>
-                <div class="sectCard projCard">
+                <div id="admin" class="sectCard projCard">
                     <img src="img/projets/admin.jpg" alt="">
                     <h3>Site admin pour CartoTourisme</h3>
-                    <span class="line"></span>
                     <div class="outils">
                         <p><b>Langages :</b> HTML, CSS, PHP</p>
                         <p><b>Frameworks :</b> Laravel, Bootstrap</p>
                     </div>
-                    <span class="line"></span>
                     <p>
                         Le site administrateur permet de gérer les articles (événements, lieux à visiter, etc.) et la messagerie du site CartoTourisme. 
                         Le client peut alimenter facilement la base de données que j'ai mise en place et ainsi compléter son site. 
                         J'ai pu mettre en application les 4 opérations de base liées aux données : Create, 
-                        Read, Update, Delete. J'ai beaucoup appris en autodidacte, notamment l'utilisation de Laravel, mais je n'ai pas pu 
-                        terminer le projet car le stage touchait à sa fin.
+                        Read, Update, Delete. J'ai beaucoup appris en autodidacte, notamment l'utilisation de Laravel.
                     </p>
                     <a href="https://github.com/Eleth6/CartoTourisme-laravel" target="_blank"><span>Projet Laravel sur Github <i class="fas fa-arrow-right"></i></span></a>  
                 </div>
-                <div class="sectCard projCard">
+                <div id="pierre" class="sectCard projCard">
                     <img src="img/projets/pierre.jpg" alt="">
                     <h3>Portfolio pour compositeur de musique</h3>
-                    <span class="line"></span>
                     <div class="outils">
                         <p><b>Langages :</b> HTML, CSS, JavaScript</p>
                         <p><b>Frameworks :</b> aucun, site réalisé from scratch</p>
                     </div>
-                    <span class="line"></span>
                     <p>
                         Au cours d'un projet de groupe pour le BUT, nous avons réalisé un site portfolio pour un compositeur de musique. 
                         L'objectif de ce projet était de faire un site ergonomique et accessible. J'ai travaillé avec un autre de mes camarades sur 
@@ -384,13 +378,14 @@
         <section id="contact">
             <div class="cardContact">
                 <h2>Contact</h2>
+                <img id="mobile" class="mobilePic" src="img/profileLight.jpg" alt="profile pic">
                 <img class="profilePic" src="img/profileLight.jpg" alt="profile pic">
                 <p>
                     Je suis actuellement à la recherche d'une alternance de 2 ans en développement web. Vous pouvez me contacter avec l'adresse mail 
                     ci-dessous. Vous trouverez également mon profil LinkedIn et mon profil Github si vous souhaitez voir mes différents projets.
                 </p>
                 <ul class="social">
-                    <li><a href="mailto: roxane.riou63@gmail.com" target="_blank"><i class="fadeUp fab fas fa-envelope"></i>Email: roxane.riou63@gmail.com</a></li>
+                    <li><a href="mailto: roxane.riou63@gmail.com" target="_blank"><i class="fadeUp fab fas fa-envelope"></i>roxane.riou63@gmail.com</a></li>
                     <li><a href="https://www.linkedin.com/in/roxane-riou-3a9114238/" target="_blank"><i class="fadeUp fab fa-linkedin"></i>Mon profil LinkedIn</a></li>
                     <li class="github"><a class="github" href="https://github.com/Eleth6?tab=repositories" target="_blank"><i class="fadeUp fab fa-github"></i>Mon profil Github</a></li>
                 </ul>
