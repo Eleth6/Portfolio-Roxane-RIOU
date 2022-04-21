@@ -1,0 +1,451 @@
+/* Responsive */
+
+@media (max-width: 1525px) {    
+    
+    /* Sections */
+    
+    .navBtn {
+        padding: 25px 60px;
+    }
+}
+
+@media (max-width: 1425px) {
+    
+    /* Contact */
+
+    .cardContact p {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 1225px) {
+    
+    /* Home */    
+    .profilePic {
+        width: 25vh;
+        height: 25vh;
+    }
+    
+    .colorPop {
+        font-size: 55px;
+        margin: 0 10px;
+    }
+    
+    .homeText p {
+        font-size: 18px;
+    }
+
+    /* Sections */
+
+    .sectNav {
+        width: 90vw;
+    }
+    
+    .navBtn {
+        padding: 25px 40px;
+    }
+
+    /* CV */
+
+    #formation>.cvCard {
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    /* A propos */
+
+    #apropos {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    #apropos>.sectCard {
+        flex-direction: column;
+        height: 90vh;
+        justify-content: space-evenly;
+    }
+
+    #apropos>.sectCard>p {
+        width: 60vw;
+        margin: 0;
+    }
+
+    #apropos>h2 {
+        font-size: 20px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* Contact */
+
+    .cardContact h2 {
+        font-size: 25px;
+    }
+
+    .cardContact {
+        width: 70vw;
+    }
+
+    .cardContact p {
+        width: 42vw;
+        font-size: 16px;
+    }
+
+    .social li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    /* Header */
+
+    nav>a {
+        padding: 15px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+
+    /* A propos */
+
+    #apropos>.sectCard {
+        height: 80vh;
+    }
+
+    #apropos>.sectCard>p {
+        width: 65vw;
+    }
+
+    .slider {
+        width: 60vh;
+        height: 43vh;
+    }
+
+    .navigation {
+        height: 43vh;
+    }
+
+    .aboutCard>img {
+        height: 45vh;
+    }
+
+    /* Projets */
+
+    #projet {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .projCard {
+        width: 400px;
+        margin: 10px;
+    }
+
+    .projSect {
+        flex-wrap: wrap;
+    }
+
+    #pierre {
+        margin-top: 40px;
+    }
+
+    /* Contact */
+
+    .mobilePic {
+        justify-self: center;
+        align-self: center;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .cardContact .profilePic {
+        display: none;
+    }
+
+    .cardContact p {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 845px) {
+    
+    /* Home */
+    
+    #home {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .profilePic {
+        margin-bottom: 10px;
+        order: 1;
+    }
+    
+    .colorPop {
+        margin: 0;
+    }
+    
+    .homeText {
+        order: 2;
+        text-align: center;
+    }
+
+    .homeText>h3 {
+        margin: 0;
+    }
+
+    /* Sections */
+
+    .navBtn {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+
+    /* A propos */
+
+    #apropos>.sectCard {
+        height: 85vh;
+    }
+
+    .slider {
+        width: 65vh;
+        height: 45vh;
+    }
+
+    .navigation {
+        height: 45vh;
+    }
+
+    #apropos>.sectCard>p {
+        font-size: 14px;
+    }
+
+    /* Projets */
+
+    #admin {
+        margin-top: 40px;
+    }
+
+    .projCard {
+        width: 600px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    /* Sections */
+    
+    .navBtn {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    /* A propos */
+
+    .slider {
+        width: 55vh;
+        height: 35vh;
+    }
+
+    .navigation {
+        height: 37vh;
+    }
+
+    #apropos>.sectCard {
+        height: 75vh;
+    }
+
+    .aboutCard>img {
+        height: 35vh;
+    }
+
+    /* Projets */
+
+    .projCard {
+        width: 85vw;
+    }
+
+    /* Contact */
+
+    .cardContact p {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    /* Header */
+
+    nav>a {
+        padding: 10px;
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+    /* A propos */
+    
+    .slider {
+        width: 55vh;
+        height: 35vh;
+    }
+
+    .navigation {
+        height: 38vh;
+    }
+
+    #apropos>.sectCard {
+        height: 80vh;
+    }
+
+    /* Contact */
+
+    .mobilePic {
+        width: 130px;
+        height: 130px;
+    }
+
+    .social li a {
+        padding: 15px 0 15px 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    /* Header */
+
+    nav>a {
+        padding: 10px;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    /* Home */
+       
+    .profilePic {
+        width: 25vh;
+        height: 25vh;
+        border-radius: 50%;
+    }
+    
+    .colorPop {
+        color: var(--lightFont);
+        font-size: 40px;
+        padding: 0;
+        margin: 0 10px;
+        font-weight: 400;
+    }
+    
+    .homeText p {
+        font-size: 15px;
+    }
+    
+
+    /* A propos */
+
+    #apropos>.sectCard {
+        width: 90vw;
+    }
+
+    #apropos>.sectCard>p {
+        width: 70vw;
+    }
+
+    .slider {
+        width: 80vw;
+        height: 35vh;
+    }
+
+    .navigation {
+        height: 38vh;
+    }
+
+    .aboutCard>img {
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    /* Header */
+
+    nav>a {
+        padding: 10px;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
+        margin: 10px 10px;
+    }
+
+    /* Home */    
+    .profilePic {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .colorPop {
+        font-size: 55px;
+        margin: 0 10px;
+    }
+
+    .homeText p {
+        width: 80vw;
+    }
+
+    /* Sections */
+    
+    .navBtn {
+        padding: 20px 10px;
+        font-size: 10px;
+    }    
+
+    /* A propos */
+
+    #apropos>.sectCard>p {
+        width: 70vw;
+        margin: 0;
+    }
+
+    .slider {
+        width: 80vw;
+        height: 30vh;
+    }
+
+    .navigation {
+        height: 32vh;
+    }
+
+    .navigation-visibility .slide-icon {
+        width: 5px;
+        height: 5px;
+    }
+
+    #apropos>.sectCard {
+        height: 80vh;
+    }
+
+    /* Projets */
+
+    .outils {
+        margin: 10px 0;
+    }
+
+    .outils, .projCard>p {
+        font-size: 14px;
+    }
+
+    /* Contact */
+
+    .cardContact p {
+        width: 55vw;
+    }
+
+    .social li a:hover {
+        margin-left: 0;
+    }
+}

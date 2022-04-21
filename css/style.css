@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -87,6 +87,36 @@ nav>a:hover>span:after, nav>a.active>span:after {
     transform: scaleX(1);
 }
 
+/* ------------------------- Home ------------------------- */
+
+#home {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url('../img/fond.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.profilePic {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+}
+
+.colorPop {
+    color: var(--lightFont);
+    font-size: 60px;
+    padding: 0;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.homeText p {
+    font-size: 22px;
+}
+
 /* ------------------------- Sections ------------------------- */
 
 section {
@@ -118,6 +148,7 @@ h2 {
     border-radius: 20px;
     z-index:0;  
     box-shadow: rgba(0, 0, 0, 0.2) 1.2px 1.2px 2.5px;
+    padding: 0;
 }
 
 .navBtn.active {
@@ -169,36 +200,6 @@ h2 {
     border-radius: 20px;
 }
 
-/* ------------------------- Home ------------------------- */
-
-#home {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-image: url('../img/fond.png');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.profilePic {
-    width: 30vh;
-    height: 30vh;
-    border-radius: 50%;
-}
-
-.colorPop {
-    color: var(--lightFont);
-    font-size: 60px;
-    padding: 0;
-    margin: 0 10px;
-    font-weight: 400;
-}
-
-.homeText p {
-    font-size: 22px;
-}
-
 /* ------------------------- CV ------------------------- */
 
 #cv {
@@ -210,6 +211,7 @@ h2 {
 
 .cvSect {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin-top: 30px;
     width: 85vw;
@@ -229,12 +231,12 @@ h2 {
     font-weight: bold;
 }
 
-.line {
+.cvCard .line {
     background-color: var(--darkFont);
     width: 3vw;
     height: 1px;
     font-weight: 200;
-    margin: 8px 0px;
+    margin: 10px 0;
 }
 
 /* Formation */
@@ -263,7 +265,6 @@ h2 {
 
 .expText {
     width: 25vw;
-    /* background-color: #CC726F; */
     margin: 0px 20px;
 }
 
@@ -297,7 +298,7 @@ h2 {
     text-align: center;
 }
 
-.cvCard>.bold {
+#competences>.cvCard>.bold {
     margin-top: 30px;
 }
 
@@ -351,6 +352,7 @@ h2 {
     text-decoration: none;
     font-size: 20px;
     padding: 42px 130px 15px 130px;
+    text-align: center;
 }
 
 #cv>a>span {
@@ -413,7 +415,7 @@ h2 {
 
 .slider {
     position: relative;
-    width: 35vw;
+    width: 80vh;
     height: 55vh;
     overflow: hidden;
     border-radius: 20px;
@@ -532,6 +534,7 @@ h2 {
 
 #projet h2 {
     margin: 0 0 20px 0;
+    padding: 0;
 }
 
 .projSect {
@@ -543,7 +546,7 @@ h2 {
 
 .projCard {
     width: 28vw;
-    height: 77vh;
+    height: auto;
     align-items: flex-start;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: relative;
@@ -556,15 +559,15 @@ h2 {
 }
 
 .projCard>h3 {
-    margin: 20px 0 0 0;
+    margin: 25px 0 0 0;
     align-self: center;
     color: var(--lightFont);
     font-size: 16px;
+    text-align: center;
 }
 
-.projCard>.line {
-    align-self: center;
-    margin: 17px 0px;
+.outils {
+    margin: 25px 0;
 }
 
 .projCard>.outils>p {
@@ -574,6 +577,7 @@ h2 {
 
 .projCard>p {
     margin: 0 20px;
+    padding-bottom: 70px;
     font-size: 14px;
     text-align: justify;
 }
@@ -637,7 +641,6 @@ h2 {
     border-radius: 30px;
     padding: 2vw;
     width: 60vw;
-    height: 45vh;
     color: var(--darkFont);
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -647,6 +650,13 @@ h2 {
     text-align: center;
     font-size: 30px;
     margin-top: 20px;
+}
+
+.mobilePic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: none;
 }
 
 .cardContact .profilePic {
@@ -719,114 +729,9 @@ footer>p {
 
 /* Animations */
 
-/* Animations */
-
-.fadeDown {
-    animation: fadeDown 2s;
-    -webkit-animation: fadeDown 2s forwards;
-  }
-
-.fadeUp {
-  animation: fadeUp 1s;
-  -webkit-animation: fadeUp 1s forwards;
-}
-  
-  .fadeLeft {
-    animation: fadeLeft 2s;
-    -webkit-animation: fadeLeft 2s forwards;
-  }
-  
-  .fadeRight {
-    animation: fadeRight 2s;
-    -webkit-animation: fadeRight 2s forwards;
-  }
-
   .fadeIn {
     animation: fadeIn 1s;
     -webkit-animation: fadeIn 1s forwards;
-  }
-  
-  @keyframes fadeDown {
-    0% {
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
-
-  @-webkit-keyframes fadeDown {
-    0% {
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
-
-  @keyframes fadeUp {
-    0% {
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
-
-  @keyframes fadeUp {
-    0% {
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
-  
-  @keyframes fadeRight {
-    from {
-        transform: translateX(1000px);
-    }    
-    
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-  }
-  
-  @-webkit-keyframes fadeRight {
-    from {
-        transform: translateX(1000px);
-    }     
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-  }
-  
-  @keyframes fadeLeft {
-    from {
-        transform: translateX(-100px);
-    }    
-    
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-  }
-  
-  @-webkit-keyframes fadeLeft {
-    from {
-        transform: translateX(-100px);
-    }    
-    
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
   }
 
   @keyframes fadeIn {
@@ -835,4 +740,4 @@ footer>p {
     } to {
         opacity: 1;
     }
-}
+  }
