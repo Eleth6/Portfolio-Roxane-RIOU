@@ -209,13 +209,25 @@ h2 {
     align-items: center;
 }
 
-.cvSect {
+#formation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-top: 30px;
+}
+
+#competences {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-top: 30px;
+}
+
+#experience, #scolaire {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     margin-top: 30px;
     width: 85vw;
-    justify-content: space-between;
 }
 
 .cvCard {
@@ -302,8 +314,9 @@ h2 {
     margin-top: 30px;
 }
 
-.cvCard>ul {
-    padding-left: 20px;
+#competences>.cvCard>ul {
+    padding: 0 0 0 20px;
+    margin: 15px 0 0 0;
 }
 
 .cvCard>ul>li {
@@ -327,6 +340,9 @@ h2 {
 
 #competences {
     display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-top: 30px;
 }
 
 /* scolaire */

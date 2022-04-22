@@ -16,6 +16,14 @@
     .cardContact p {
         width: 35vw;
     }
+
+    /* CV */
+
+    #competences>.cvCard, 
+    #competences>.cvCard>ul>li,
+    #competences>.cvCard>p {
+        font-size: 14px;   
+    }
 }
 
 @media (max-width: 1225px) {
@@ -47,9 +55,60 @@
 
     /* CV */
 
+    #cv {
+        height: auto;
+        padding: 25px 0px;
+    }
+
+    #formation, #competences {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 15px;
+    }
+
+    #experience, #scolaire {
+        margin-top: 15px;
+    }
+
     #formation>.cvCard {
         height: auto;
-        padding: 15px 10px;
+        padding: 10px;
+        width: 40vw;
+    }
+
+    #formation>.cvCard>.line, #competences>.cvCard>.line {
+        margin: 5px 0;
+    }
+
+    #competences>.cvCard {
+        height: auto;
+        padding: 20px;
+        width: 38vw;
+    }
+
+    #competences>.cvCard>.bold {
+        margin-top: 0px;
+    }
+
+    #experience>.cvCard {
+        height: auto;
+        padding: 10px;
+    }
+
+    #cv>a {
+        font-size: 18px;
+        padding: 30px 50px 10px 50px;
+        text-align: center;
+    }
+
+    #formation>.cvCard>p, 
+    .italic, .bold,
+    #experience>.cvCard>p,
+    .expText>p, .expText,
+    .expText>ul>li>a,
+    #scolaire>.cvCard>p, 
+    #scolaire>.cvCard>ul>li {
+        font-size: 15px;
     }
 
     /* A propos */
@@ -165,6 +224,19 @@
     .cardContact p {
         width: 65vw;
     }
+
+    /* CV */
+
+    #scolaire>.cvCard {
+        width: 70vw;
+        height: auto;
+        padding: 30px;
+    }
+
+    #scolaire>.cvCard>p, 
+    #scolaire>.cvCard>ul>li {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 845px) {
@@ -230,6 +302,28 @@
         width: 600px;
         margin: 10px;
     }
+
+    /* CV */
+
+    #formation>.cvCard>p, 
+    #competences>.cvCard>p, 
+    .italic, .bold, 
+    #competences>.cvCard>ul>li,
+    #experience>.cvCard>p,
+    .expText>p, .expText,
+    .expText>ul>li>a,
+    #scolaire>.cvCard>p, 
+    #scolaire>.cvCard>ul>li {
+        font-size: 14px;
+    }
+
+    #experience>.cvCard>div {
+        flex-direction: column;
+    }
+
+    .expText {
+        width: 82vw;
+    }
 }
 
 @media (max-width: 700px) {
@@ -270,6 +364,16 @@
 
     .cardContact p {
         width: 60vw;
+    }
+
+    /* CV */
+
+    #formation>.cvCard {
+        width: 35vw;
+    }
+
+    #competences>.cvCard {
+        width: 33vw;
     }
 }
 
@@ -364,6 +468,28 @@
         width: 80vw;
         height: auto;
     }
+
+    /* CV */
+
+    #competences>.cvCard>p,
+    #competences>.cvCard>ul>li {
+        font-size: 12px;
+    }
+
+    #competences {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin-top: 15px;
+    }
+
+    #competences>.cvCard {
+        width: 70vw;
+    }
+
+    .expText {
+        width: 85vw;
+        margin: 0px 10px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -384,24 +510,25 @@
 
     /* Home */    
     .profilePic {
-        width: 25vh;
-        height: 25vh;
+        width: 20vh;
+        height: 20vh;
     }
 
     .colorPop {
-        font-size: 55px;
+        font-size: 45px;
         margin: 0 10px;
     }
 
     .homeText p {
         width: 80vw;
+        font-size: 15px;
     }
 
     /* Sections */
     
     .navBtn {
-        padding: 20px 10px;
-        font-size: 10px;
+        padding: 10px;
+        font-size: 5px;
     }    
 
     /* A propos */
@@ -447,5 +574,27 @@
 
     .social li a:hover {
         margin-left: 0;
+    }
+
+    /* CV */
+
+    #formation>.cvCard>p, 
+    #competences>.cvCard>p, 
+    .italic, .bold, 
+    #competences>.cvCard>ul>li,
+    #experience>.cvCard>p,
+    .expText>p, .expText,
+    .expText>ul>li>a,
+    #scolaire>.cvCard>p, 
+    #scolaire>.cvCard>ul>li {
+        font-size: 12px;
+    }
+
+    #formation>.cvCard>.line, #competences>.cvCard>.line {
+        margin: 3px 0;
+    }
+
+    #cv>a {
+        font-size: 15px;
     }
 }
