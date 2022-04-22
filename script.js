@@ -20,7 +20,7 @@ const allcvBtns = document.getElementsByClassName('cvBtn');
 const allcvSects = document.getElementsByClassName('cvSect');
 
 allcvBtns[0].addEventListener('click', function() {
-    allcvSects[0].style.display = "flex"
+    allcvSects[0].style.display = "grid"
     allcvSects[1].style.display = "none"
     allcvSects[2].style.display = "none"
     allcvSects[3].style.display = "none"
@@ -46,7 +46,7 @@ allcvBtns[1].addEventListener('click', function() {
 allcvBtns[2].addEventListener('click', function() {
     allcvSects[0].style.display = "none"
     allcvSects[1].style.display = "none"
-    allcvSects[2].style.display = "flex"
+    allcvSects[2].style.display = "grid"
     allcvSects[3].style.display = "none"
 
     allcvBtns[0].classList.remove('active')
