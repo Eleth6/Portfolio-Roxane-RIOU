@@ -14,111 +14,57 @@ setInterval(function(){
   }}, 50
 )
 
+// Language
+
+const langue = document.getElementsByTagName('body')[0]
+const languageBtn = document.getElementById('language');
+
+languageBtn.addEventListener('click', function() {
+  if (langue.classList.contains("english")) {
+    langue.classList.remove("english")
+    langue.classList.add("french")
+  } else {
+    langue.classList.add("english")
+    langue.classList.remove("french")
+  }
+});
+
 // Formation boutons
 
 const allcvBtns = document.getElementsByClassName('cvBtn');
 const allcvSects = document.getElementsByClassName('cvSect');
+let saveActuali = 0
 
-allcvBtns[0].addEventListener('click', function() {
-    allcvSects[0].style.display = "grid"
-    allcvSects[1].style.display = "none"
-    allcvSects[2].style.display = "none"
-    allcvSects[3].style.display = "none"
+for (let i=0; i<allcvBtns.length; i++) {
+  allcvBtns[i].addEventListener('click', function() {
+    allcvSects[saveActuali].style.display = "none"
+    allcvBtns[saveActuali].classList.remove("active")
+      
+    allcvSects[i].style.display = "grid"
+    allcvBtns[i].classList.add("active")
+    saveActuali = i
 
-    allcvBtns[0].classList.add('active')
-    allcvBtns[1].classList.remove('active')
-    allcvBtns[2].classList.remove('active')
-    allcvBtns[3].classList.remove('active')
-});
-
-allcvBtns[1].addEventListener('click', function() {
-    allcvSects[0].style.display = "none"
-    allcvSects[1].style.display = "flex"
-    allcvSects[2].style.display = "none"
-    allcvSects[3].style.display = "none"
-
-    allcvBtns[0].classList.remove('active')
-    allcvBtns[1].classList.add('active')
-    allcvBtns[2].classList.remove('active')
-    allcvBtns[3].classList.remove('active')
-});
-
-allcvBtns[2].addEventListener('click', function() {
-    allcvSects[0].style.display = "none"
-    allcvSects[1].style.display = "none"
-    allcvSects[2].style.display = "grid"
-    allcvSects[3].style.display = "none"
-
-    allcvBtns[0].classList.remove('active')
-    allcvBtns[1].classList.remove('active')
-    allcvBtns[2].classList.add('active')
-    allcvBtns[3].classList.remove('active')
-});
-
-allcvBtns[3].addEventListener('click', function() {
-    allcvSects[0].style.display = "none"
-    allcvSects[1].style.display = "none"
-    allcvSects[2].style.display = "none"
-    allcvSects[3].style.display = "flex"
-
-    allcvBtns[0].classList.remove('active')
-    allcvBtns[1].classList.remove('active')
-    allcvBtns[2].classList.remove('active')
-    allcvBtns[3].classList.add('active')
-});
+    console.log(i)
+    console.log(saveActuali)
+  });
+}
 
 // A propos boutons
 
 const allAboutBtns = document.getElementsByClassName('aboutBtn');
 const allAboutSects = document.getElementsByClassName('aboutCard');
+let saveActuali2 = 0
 
-allAboutBtns[0].addEventListener('click', function() {
-    allAboutSects[0].style.display = "flex"
-    allAboutSects[1].style.display = "none"
-    allAboutSects[2].style.display = "none"
-    allAboutSects[3].style.display = "none"
-
-    allAboutBtns[0].classList.add('active')
-    allAboutBtns[1].classList.remove('active')
-    allAboutBtns[2].classList.remove('active')
-    allAboutBtns[3].classList.remove('active')
-});
-
-allAboutBtns[1].addEventListener('click', function() {
-    allAboutSects[0].style.display = "none"
-    allAboutSects[1].style.display = "flex"
-    allAboutSects[2].style.display = "none"
-    allAboutSects[3].style.display = "none"
-
-    allAboutBtns[0].classList.remove('active')
-    allAboutBtns[1].classList.add('active')
-    allAboutBtns[2].classList.remove('active')
-    allAboutBtns[3].classList.remove('active')
-});
-
-allAboutBtns[2].addEventListener('click', function() {
-    allAboutSects[0].style.display = "none"
-    allAboutSects[1].style.display = "none"
-    allAboutSects[2].style.display = "flex"
-    allAboutSects[3].style.display = "none"
-
-    allAboutBtns[0].classList.remove('active')
-    allAboutBtns[1].classList.remove('active')
-    allAboutBtns[2].classList.add('active')
-    allAboutBtns[3].classList.remove('active')
-});
-
-allAboutBtns[3].addEventListener('click', function() {
-    allAboutSects[0].style.display = "none"
-    allAboutSects[1].style.display = "none"
-    allAboutSects[2].style.display = "none"
-    allAboutSects[3].style.display = "flex"
-
-    allAboutBtns[0].classList.remove('active')
-    allAboutBtns[1].classList.remove('active')
-    allAboutBtns[2].classList.remove('active')
-    allAboutBtns[3].classList.add('active')
-});
+for (let i=0; i<allAboutBtns.length; i++) {
+  allAboutBtns[i].addEventListener('click', function() {
+    allAboutSects[saveActuali2].style.display = "none"
+    allAboutBtns[saveActuali2].classList.remove("active")
+      
+    allAboutSects[i].style.display = "flex"
+    allAboutBtns[i].classList.add("active")
+    saveActuali2 = i
+  });
+}
 
 // Carousel
 
