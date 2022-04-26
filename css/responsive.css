@@ -584,7 +584,7 @@
     #competences>.cvCard>ul>li,
     #experience>.cvCard>p,
     .expText>p, .expText,
-    .expText>ul>li>a,
+    .expText>ul>li>span>a,
     #scolaire>.cvCard>p, 
     #scolaire>.cvCard>ul>li {
         font-size: 12px;

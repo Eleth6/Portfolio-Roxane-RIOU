@@ -16,7 +16,11 @@ body {
     font-family: 'Quattrocento', serif;
 }
 
-.english {
+body.french span.english {
+    display: none;
+}
+
+body.english span.french {
     display: none;
 }
 
@@ -85,6 +89,32 @@ nav>a:hover {
 
 nav>a:hover>span:after, nav>a.active>span:after {
     transform: scaleX(1);
+}
+
+/* ------------------------- English or French ------------------------- */
+
+#language {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--darkFont);
+    cursor: pointer;
+}
+
+#language>span>img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 /* ------------------------- Home ------------------------- */
@@ -284,7 +314,7 @@ h2 {
     text-align: center;
 }
 
-.expText>ul>li>a {
+.expText>ul>li>span>a {
     color: var(--lightFont);
     transition: 0.2s;
 }
@@ -598,7 +628,7 @@ h2 {
     text-align: justify;
 }
 
-.projCard>p>a {
+.projCard>p>span>a {
     color: var(--lightFont);
     font-weight: bold;
 }
@@ -748,6 +778,11 @@ footer>p {
   .fadeIn {
     animation: fadeIn 1s;
     -webkit-animation: fadeIn 1s forwards;
+  }
+
+  .languageFadeIn {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s forwards;
   }
 
   @keyframes fadeIn {
