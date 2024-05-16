@@ -40,7 +40,7 @@ for (let i=0; i<allcvBtns.length; i++) {
     allcvSects[saveActuali].style.display = "none"
     allcvBtns[saveActuali].classList.remove("active")
       
-    allcvSects[i].style.display = "grid"
+    allcvSects[i].style.display = "flex"
     allcvBtns[i].classList.add("active")
     saveActuali = i
 

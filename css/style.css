@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap');
 
 *{
     --headerDark: #e0dfdf;
     --darkerSection: #e6e6e6;
     --lightSection: #f1f1f1;
     --darkSection: #EBECEC;
-    --lightFont: #CC726F;
+    --lightFont: #be6663;
     --darkFont: #774936;
 }
 
@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--darkFont);
-    font-family: 'Quattrocento', serif;
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 
 body.french span.english {
@@ -60,6 +60,7 @@ nav>a {
     margin: 0 5px;
     font-size: 18px;
     transition: 0.4s;
+    font-family: 'Quattrocento', serif;
 }
 
 nav>a.active {
@@ -143,8 +144,12 @@ nav>a:hover>span:after, nav>a.active>span:after {
     font-weight: 400;
 }
 
+.homeText h3 {
+    font-family: "Quattrocento", serif;
+}
+
 .homeText p {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 /* ------------------------- Sections ------------------------- */
@@ -165,6 +170,7 @@ section:nth-child(even){
 h2 {
     color: var(--lightFont);
     margin: 0;
+    font-family: "Quattrocento", serif;
 }
 
 .sectNav {
@@ -230,6 +236,10 @@ h2 {
     border-radius: 20px;
 }
 
+p>span {
+    line-height: 1.5em;
+}
+
 /* ------------------------- CV ------------------------- */
 
 #cv {
@@ -237,6 +247,8 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #formation {
@@ -253,9 +265,10 @@ h2 {
     margin-top: 30px;
 }
 
-#experience, #scolaire {
+#experience {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 30px;
     width: 85vw;
 }
@@ -295,8 +308,9 @@ h2 {
 /* Expérience */
 
 #experience>.cvCard {
-    width: 85vw;
+    width: 41vw;
     justify-content: center;
+    padding: 20px 0;
 }
 
 #experience>.cvCard>div {
@@ -305,13 +319,22 @@ h2 {
     justify-content: center;
 }
 
+#experience>.cvCard>.line {
+    margin: 0.1em;
+}
+
 .expText {
     width: 25vw;
-    margin: 0px 20px;
+    font-size: 0.9em;
+    margin-right: 10px;
 }
 
 .expText>p {
     text-align: center;
+}
+
+.expText>ul>li {
+    margin-bottom: 8px;
 }
 
 .expText>ul>li>span>a {
@@ -323,6 +346,10 @@ h2 {
     color: var(--darkFont);
 }
 
+.expContent {
+    width: 100%;
+}
+
 #experience {
     display: none;
 }
@@ -331,8 +358,9 @@ h2 {
 
 #competences>.cvCard {
     width: 16vw;
+    height: auto;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 15px 15px 15px;
 }
 
 .cvCard>.bold, .cvCard>.line {
@@ -344,20 +372,27 @@ h2 {
     margin-top: 30px;
 }
 
-#competences>.cvCard>ul {
+.list {
     padding: 0 0 0 20px;
-    margin: 15px 0 0 0;
+    margin: 10px 0 0 0;
+}
+
+.listItems>li {
+    margin-top: 10px;
+}
+
+.listItems>li>i {
+    width: 20px;
+    height: 20px;
+}
+
+.listItems>li>img {
+    margin-right: 10px;
 }
 
 .cvCard>ul>li {
     font-size: 15px;
     margin-bottom: 5px; 
-}
-
-.dev>ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .dev>ul>li {
@@ -366,6 +401,12 @@ h2 {
 
 .dev>ul>li>i {
     margin-right: 5px;
+}
+
+.listItems {
+    list-style: none;
+    padding: 10px 0 0 20px;
+    margin: 0;
 }
 
 #competences {
